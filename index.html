@@ -9,6 +9,44 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Exo:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- Meta Pixel Code (client-side) -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '26905366805730496');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=26905366805730496&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- Meta Conversions API (server-side via Vercel) — duplica o PageView pelo servidor -->
+  <script>
+  (function() {
+    function getCookie(name) {
+      var v = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+      return v ? v.pop() : '';
+    }
+    fetch('/api/meta-event', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        event_name: 'PageView',
+        event_source_url: window.location.href,
+        client_user_agent: navigator.userAgent,
+        fbc:  getCookie('_fbc'),
+        fbp:  getCookie('_fbp'),
+      })
+    }).catch(function(){});
+  })();
+  </script>
+  <!-- End Meta Pixel Code -->
+
   <style>
   /* ====== COLLECTED SITE CSS ====== */
   
@@ -1560,13 +1598,13 @@ Eu sei que mesmo depois do que te mostramos aqui, você pode ainda estar insegur
 				<div class="elementor-widget-container">
 					        <div class="eael-adv-accordion" id="eael-adv-accordion-5609fcf2" data-scroll-on-click="no" data-scroll-speed="300" data-accordion-id="5609fcf2" data-accordion-type="accordion" data-toogle-speed="300">
     <div class="eael-accordion-list">
-                <div id="o-que-o-maximum-alvio" class="elementor-tab-title eael-accordion-header active-default" tabindex="0" data-tab="1" aria-controls="elementor-tab-content-1441"><span class="fa-toggle fa-toggle-svg eaa-svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M806.3,71.2c-16.9,0-30.6-13.7-30.6-30.6S789.3,10,806.3,10s30.6,13.7,30.6,30.6S823.2,71.2,806.3,71.2 M836.9,806.3H622.5c-20.6,0-39.7,6.8-55,18.3L374,969.7c-0.3,0.3-0.5,0.3-0.9,0.7c-15.6,12.3-35.4,19.7-56.8,19.7c-50.7,0-91.9-41.1-91.9-91.9v-61.3c0-16.9-13.7-30.6-30.6-30.6h-30.6c-67.7,0-122.5-54.8-122.5-122.5V132.5C40.6,64.8,95.5,10,163.1,10h520.6c16.9,0,30.6,13.7,30.6,30.6s-13.7,30.6-30.6,30.6H178.4c-42.3,0-76.6,34.3-76.6,76.6v520.6c0,42.3,34.3,76.6,76.6,76.6h30.6c42.3,0,76.6,34.3,76.6,76.6v76.6c0,16.9,13.7,30.6,30.6,30.6c6.5,0,12.5-2,17.4-5.4c0,0,0,0,0.1,0l194.9-146.2c0,0,0.1,0,0.1-0.1c25.9-20.1,58.4-32,93.7-32h199.1c42.3,0,76.6-34.3,76.6-76.6V163.1c0-16.9,13.7-30.6,30.6-30.6c16.9,0,30.6,13.7,30.6,30.6v520.6C959.4,751.4,904.5,806.3,836.9,806.3 M500,255c-50.7,0-91.9,41.1-91.9,91.9c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6c0-84.6,68.6-153.1,153.1-153.1c84.6,0,153.1,68.6,153.1,153.1c0,63.5-38.7,117.8-93.7,141c-0.1,0-0.1,0.1-0.1,0.1c-16.8,6.8-28.7,23.3-28.7,42.6c0,2.3-0.2,4.1-0.6,5.7c-2.7,14.2-15.1,25-30.1,25c-16.9,0-30.6-13.7-30.6-30.6c0-44.5,27.1-82.6,65.6-98.8c0,0,0.1,0,0.1-0.1c33.3-13.8,56.8-46.5,56.8-84.8C591.9,296.1,550.7,255,500,255 M500,622.5c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6C469.4,636.2,483.1,622.5,500,622.5"></path></g></svg></span><span class="eael-accordion-tab-title">O que é o Maximum Alívio?</span></div><div id="elementor-tab-content-1441" class="eael-accordion-content clearfix active-default" data-tab="1" aria-labelledby="o-que-o-maximum-alvio"><div id="elementor-tab-content-5792" class="elementor-tab-content elementor-clearfix elementor-active" role="tabpanel" data-tab="2" aria-labelledby="elementor-tab-title-5792"><div id="elementor-tab-content-9921" class="elementor-tab-content elementor-clearfix elementor-active" role="tabpanel" data-tab="1" aria-labelledby="elementor-tab-title-9921"><p>O suplemento Maximum Alívio é frequentemente utilizado para promover a saúde das articulações e reduzir a dor causada por condições como a osteoartrite. Ele pode ajudar a melhorar a mobilidade e a função das articulações.</p></div></div></div>
+                <div id="o-que-o-maximum-alvio" class="elementor-tab-title eael-accordion-header active-default" tabindex="0" data-tab="1" aria-controls="elementor-tab-content-1441"><span class="fa-toggle fa-toggle-svg eaa-svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M806.3,71.2c-16.9,0-30.6-13.7-30.6-30.6S789.3,10,806.3,10s30.6,13.7,30.6,30.6S823.2,71.2,806.3,71.2 M836.9,806.3H622.5c-20.6,0-39.7,6.8-55,18.3L374,969.7c-0.3,0.3-0.5,0.3-0.9,0.7c-15.6,12.3-35.4,19.7-56.8,19.7c-50.7,0-91.9-41.1-91.9-91.9v-61.3c0-16.9-13.7-30.6-30.6-30.6h-30.6c-67.7,0-122.5-54.8-122.5-122.5V132.5C40.6,64.8,95.5,10,163.1,10h520.6c16.9,0,30.6,13.7,30.6,30.6s-13.7,30.6-30.6,30.6H178.4c-42.3,0-76.6,34.3-76.6,76.6v520.6c0,42.3,34.3,76.6,76.6,76.6h30.6c42.3,0,76.6,34.3,76.6,76.6v76.6c0,16.9,13.7,30.6,30.6,30.6c6.5,0,12.5-2,17.4-5.4c0,0,0,0,0.1,0l194.9-146.2c0,0,0.1,0,0.1-0.1c25.9-20.1,58.4-32,93.7-32h199.1c42.3,0,76.6-34.3,76.6-76.6V163.1c0-16.9,13.7-30.6,30.6-30.6c16.9,0,30.6,13.7,30.6,30.6v520.6C959.4,751.4,904.5,806.3,836.9,806.3 M500,255c-50.7,0-91.9,41.1-91.9,91.9c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6c0-84.6,68.6-153.1,153.1-153.1c84.6,0,153.1,68.6,153.1,153.1c0,63.5-38.7,117.8-93.7,141c-0.1,0-0.1,0.1-0.1,0.1c-16.8,6.8-28.7,23.3-28.7,42.6c0,2.3-0.2,4.1-0.6,5.7c-2.7,14.2-15.1,25-30.1,25c-16.9,0-30.6-13.7-30.6-30.6c0-44.5,27.1-82.6,65.6-98.8c0,0,0.1,0,0.1-0.1c33.3-13.8,56.8-46.5,56.8-84.8C591.9,296.1,550.7,255,500,255 M500,622.5c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6C469.4,636.2,483.1,622.5,500,622.5"></path></g></svg></span><span class="eael-accordion-tab-title">O que é o Maximum Alívio?</span></div><div id="elementor-tab-content-1441" class="eael-accordion-content clearfix active-default" data-tab="1" aria-labelledby="o-que-o-maximum-alvio"><div id="elementor-tab-content-5792" class="elementor-tab-content elementor-clearfix elementor-active" role="tabpanel" data-tab="2" aria-labelledby="elementor-tab-title-5792"><div id="elementor-tab-content-9921" class="elementor-tab-content elementor-clearfix elementor-active" role="tabpanel" data-tab="1" aria-labelledby="elementor-tab-title-9921"><p>O <strong>Maximum Alívio</strong> é um suplemento de <strong>Colágeno Tipo II Pro</strong> com formulação exclusiva, desenvolvido para atuar diretamente na causa raiz das dores articulares. Sua composição única combina Colágeno Tipo II americano — extraído abaixo de 0°C para preservar 100% de suas propriedades — com <strong>Curcumina Longa, Sucupira e Canela de Velho</strong>, poderosos anti-inflamatórios naturais que aliviam as dores em poucas horas e restauram as cartilagens desgastadas. É <strong>100% natural, livre de corticoides</strong>, com liberação da Anvisa e sem efeitos colaterais.</p></div></div></div>
                 </div><div class="eael-accordion-list">
-                <div id="como-tomar-o-maximum-alvio" class="elementor-tab-title eael-accordion-header" tabindex="0" data-tab="2" aria-controls="elementor-tab-content-1442"><span class="fa-toggle fa-toggle-svg eaa-svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M806.3,71.2c-16.9,0-30.6-13.7-30.6-30.6S789.3,10,806.3,10s30.6,13.7,30.6,30.6S823.2,71.2,806.3,71.2 M836.9,806.3H622.5c-20.6,0-39.7,6.8-55,18.3L374,969.7c-0.3,0.3-0.5,0.3-0.9,0.7c-15.6,12.3-35.4,19.7-56.8,19.7c-50.7,0-91.9-41.1-91.9-91.9v-61.3c0-16.9-13.7-30.6-30.6-30.6h-30.6c-67.7,0-122.5-54.8-122.5-122.5V132.5C40.6,64.8,95.5,10,163.1,10h520.6c16.9,0,30.6,13.7,30.6,30.6s-13.7,30.6-30.6,30.6H178.4c-42.3,0-76.6,34.3-76.6,76.6v520.6c0,42.3,34.3,76.6,76.6,76.6h30.6c42.3,0,76.6,34.3,76.6,76.6v76.6c0,16.9,13.7,30.6,30.6,30.6c6.5,0,12.5-2,17.4-5.4c0,0,0,0,0.1,0l194.9-146.2c0,0,0.1,0,0.1-0.1c25.9-20.1,58.4-32,93.7-32h199.1c42.3,0,76.6-34.3,76.6-76.6V163.1c0-16.9,13.7-30.6,30.6-30.6c16.9,0,30.6,13.7,30.6,30.6v520.6C959.4,751.4,904.5,806.3,836.9,806.3 M500,255c-50.7,0-91.9,41.1-91.9,91.9c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6c0-84.6,68.6-153.1,153.1-153.1c84.6,0,153.1,68.6,153.1,153.1c0,63.5-38.7,117.8-93.7,141c-0.1,0-0.1,0.1-0.1,0.1c-16.8,6.8-28.7,23.3-28.7,42.6c0,2.3-0.2,4.1-0.6,5.7c-2.7,14.2-15.1,25-30.1,25c-16.9,0-30.6-13.7-30.6-30.6c0-44.5,27.1-82.6,65.6-98.8c0,0,0.1,0,0.1-0.1c33.3-13.8,56.8-46.5,56.8-84.8C591.9,296.1,550.7,255,500,255 M500,622.5c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6C469.4,636.2,483.1,622.5,500,622.5"></path></g></svg></span><span class="eael-accordion-tab-title">Como tomar o Maximum Alívio?</span></div><div id="elementor-tab-content-1442" class="eael-accordion-content clearfix" data-tab="2" aria-labelledby="como-tomar-o-maximum-alvio"><div id="elementor-tab-content-5792" class="elementor-tab-content elementor-clearfix elementor-active" role="tabpanel" data-tab="2" aria-labelledby="elementor-tab-title-5792"><div id="elementor-tab-content-9921" class="elementor-tab-content elementor-clearfix elementor-active" role="tabpanel" data-tab="1" aria-labelledby="elementor-tab-title-9921"><p>Basta tomar uma(1) cápsulas ao dia, de preferência com líquido.</p></div></div></div>
+                <div id="como-tomar-o-maximum-alvio" class="elementor-tab-title eael-accordion-header" tabindex="0" data-tab="2" aria-controls="elementor-tab-content-1442"><span class="fa-toggle fa-toggle-svg eaa-svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M806.3,71.2c-16.9,0-30.6-13.7-30.6-30.6S789.3,10,806.3,10s30.6,13.7,30.6,30.6S823.2,71.2,806.3,71.2 M836.9,806.3H622.5c-20.6,0-39.7,6.8-55,18.3L374,969.7c-0.3,0.3-0.5,0.3-0.9,0.7c-15.6,12.3-35.4,19.7-56.8,19.7c-50.7,0-91.9-41.1-91.9-91.9v-61.3c0-16.9-13.7-30.6-30.6-30.6h-30.6c-67.7,0-122.5-54.8-122.5-122.5V132.5C40.6,64.8,95.5,10,163.1,10h520.6c16.9,0,30.6,13.7,30.6,30.6s-13.7,30.6-30.6,30.6H178.4c-42.3,0-76.6,34.3-76.6,76.6v520.6c0,42.3,34.3,76.6,76.6,76.6h30.6c42.3,0,76.6,34.3,76.6,76.6v76.6c0,16.9,13.7,30.6,30.6,30.6c6.5,0,12.5-2,17.4-5.4c0,0,0,0,0.1,0l194.9-146.2c0,0,0.1,0,0.1-0.1c25.9-20.1,58.4-32,93.7-32h199.1c42.3,0,76.6-34.3,76.6-76.6V163.1c0-16.9,13.7-30.6,30.6-30.6c16.9,0,30.6,13.7,30.6,30.6v520.6C959.4,751.4,904.5,806.3,836.9,806.3 M500,255c-50.7,0-91.9,41.1-91.9,91.9c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6c0-84.6,68.6-153.1,153.1-153.1c84.6,0,153.1,68.6,153.1,153.1c0,63.5-38.7,117.8-93.7,141c-0.1,0-0.1,0.1-0.1,0.1c-16.8,6.8-28.7,23.3-28.7,42.6c0,2.3-0.2,4.1-0.6,5.7c-2.7,14.2-15.1,25-30.1,25c-16.9,0-30.6-13.7-30.6-30.6c0-44.5,27.1-82.6,65.6-98.8c0,0,0.1,0,0.1-0.1c33.3-13.8,56.8-46.5,56.8-84.8C591.9,296.1,550.7,255,500,255 M500,622.5c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6C469.4,636.2,483.1,622.5,500,622.5"></path></g></svg></span><span class="eael-accordion-tab-title">Como tomar o Maximum Alívio?</span></div><div id="elementor-tab-content-1442" class="eael-accordion-content clearfix" data-tab="2" aria-labelledby="como-tomar-o-maximum-alvio"><div id="elementor-tab-content-5792" class="elementor-tab-content elementor-clearfix elementor-active" role="tabpanel" data-tab="2" aria-labelledby="elementor-tab-title-5792"><div id="elementor-tab-content-9921" class="elementor-tab-content elementor-clearfix elementor-active" role="tabpanel" data-tab="1" aria-labelledby="elementor-tab-title-9921"><p>A dose recomendada é de <strong>1 (uma) cápsula ao dia</strong>, preferencialmente pela manhã, com um copo d'água. Para melhores resultados, recomenda-se o uso contínuo por pelo menos 3 meses. Muitos usuários relatam alívio das dores já nos <strong>primeiros 3 dias de uso</strong>. O produto age em duas etapas: primeiro elimina as dores rapidamente, depois restaura as cartilagens desgastadas.</p></div></div></div>
                 </div><div class="eael-accordion-list">
-                <div id="maximum-alvio-aprovado-pela-anvisa" class="elementor-tab-title eael-accordion-header" tabindex="0" data-tab="3" aria-controls="elementor-tab-content-1443"><span class="fa-toggle fa-toggle-svg eaa-svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M806.3,71.2c-16.9,0-30.6-13.7-30.6-30.6S789.3,10,806.3,10s30.6,13.7,30.6,30.6S823.2,71.2,806.3,71.2 M836.9,806.3H622.5c-20.6,0-39.7,6.8-55,18.3L374,969.7c-0.3,0.3-0.5,0.3-0.9,0.7c-15.6,12.3-35.4,19.7-56.8,19.7c-50.7,0-91.9-41.1-91.9-91.9v-61.3c0-16.9-13.7-30.6-30.6-30.6h-30.6c-67.7,0-122.5-54.8-122.5-122.5V132.5C40.6,64.8,95.5,10,163.1,10h520.6c16.9,0,30.6,13.7,30.6,30.6s-13.7,30.6-30.6,30.6H178.4c-42.3,0-76.6,34.3-76.6,76.6v520.6c0,42.3,34.3,76.6,76.6,76.6h30.6c42.3,0,76.6,34.3,76.6,76.6v76.6c0,16.9,13.7,30.6,30.6,30.6c6.5,0,12.5-2,17.4-5.4c0,0,0,0,0.1,0l194.9-146.2c0,0,0.1,0,0.1-0.1c25.9-20.1,58.4-32,93.7-32h199.1c42.3,0,76.6-34.3,76.6-76.6V163.1c0-16.9,13.7-30.6,30.6-30.6c16.9,0,30.6,13.7,30.6,30.6v520.6C959.4,751.4,904.5,806.3,836.9,806.3 M500,255c-50.7,0-91.9,41.1-91.9,91.9c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6c0-84.6,68.6-153.1,153.1-153.1c84.6,0,153.1,68.6,153.1,153.1c0,63.5-38.7,117.8-93.7,141c-0.1,0-0.1,0.1-0.1,0.1c-16.8,6.8-28.7,23.3-28.7,42.6c0,2.3-0.2,4.1-0.6,5.7c-2.7,14.2-15.1,25-30.1,25c-16.9,0-30.6-13.7-30.6-30.6c0-44.5,27.1-82.6,65.6-98.8c0,0,0.1,0,0.1-0.1c33.3-13.8,56.8-46.5,56.8-84.8C591.9,296.1,550.7,255,500,255 M500,622.5c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6C469.4,636.2,483.1,622.5,500,622.5"></path></g></svg></span><span class="eael-accordion-tab-title">Maximum Alívio é aprovado pela anvisa?</span></div><div id="elementor-tab-content-1443" class="eael-accordion-content clearfix" data-tab="3" aria-labelledby="maximum-alvio-aprovado-pela-anvisa"><p> Sim! Devido à sua composição 100% natural, o Maximum Alívio é aprovado pela Anvisa (Agência Nacional de Vigilância Sanitária) nos termos da RDC 240 de 26/07/2018, e passou por rigorosos testes. É 100% seguro para o consumo da população brasileira, em toda sua composição.</p></div>
+                <div id="maximum-alvio-aprovado-pela-anvisa" class="elementor-tab-title eael-accordion-header" tabindex="0" data-tab="3" aria-controls="elementor-tab-content-1443"><span class="fa-toggle fa-toggle-svg eaa-svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M806.3,71.2c-16.9,0-30.6-13.7-30.6-30.6S789.3,10,806.3,10s30.6,13.7,30.6,30.6S823.2,71.2,806.3,71.2 M836.9,806.3H622.5c-20.6,0-39.7,6.8-55,18.3L374,969.7c-0.3,0.3-0.5,0.3-0.9,0.7c-15.6,12.3-35.4,19.7-56.8,19.7c-50.7,0-91.9-41.1-91.9-91.9v-61.3c0-16.9-13.7-30.6-30.6-30.6h-30.6c-67.7,0-122.5-54.8-122.5-122.5V132.5C40.6,64.8,95.5,10,163.1,10h520.6c16.9,0,30.6,13.7,30.6,30.6s-13.7,30.6-30.6,30.6H178.4c-42.3,0-76.6,34.3-76.6,76.6v520.6c0,42.3,34.3,76.6,76.6,76.6h30.6c42.3,0,76.6,34.3,76.6,76.6v76.6c0,16.9,13.7,30.6,30.6,30.6c6.5,0,12.5-2,17.4-5.4c0,0,0,0,0.1,0l194.9-146.2c0,0,0.1,0,0.1-0.1c25.9-20.1,58.4-32,93.7-32h199.1c42.3,0,76.6-34.3,76.6-76.6V163.1c0-16.9,13.7-30.6,30.6-30.6c16.9,0,30.6,13.7,30.6,30.6v520.6C959.4,751.4,904.5,806.3,836.9,806.3 M500,255c-50.7,0-91.9,41.1-91.9,91.9c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6c0-84.6,68.6-153.1,153.1-153.1c84.6,0,153.1,68.6,153.1,153.1c0,63.5-38.7,117.8-93.7,141c-0.1,0-0.1,0.1-0.1,0.1c-16.8,6.8-28.7,23.3-28.7,42.6c0,2.3-0.2,4.1-0.6,5.7c-2.7,14.2-15.1,25-30.1,25c-16.9,0-30.6-13.7-30.6-30.6c0-44.5,27.1-82.6,65.6-98.8c0,0,0.1,0,0.1-0.1c33.3-13.8,56.8-46.5,56.8-84.8C591.9,296.1,550.7,255,500,255 M500,622.5c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6C469.4,636.2,483.1,622.5,500,622.5"></path></g></svg></span><span class="eael-accordion-tab-title">Maximum Alívio é aprovado pela anvisa?</span></div><div id="elementor-tab-content-1443" class="eael-accordion-content clearfix" data-tab="3" aria-labelledby="maximum-alvio-aprovado-pela-anvisa"><p><strong>Sim!</strong> O Maximum Alívio possui <strong>liberação da Anvisa</strong> nos termos da RDC 240 de 26/07/2018, que regulamenta suplementos alimentares no Brasil. Toda a formulação passou por rigorosos testes de qualidade e segurança. Por ser 100% natural e livre de corticoides, é completamente seguro para uso contínuo — sem causar dependência, sem efeitos colaterais e sem riscos à saúde.</p></div>
                 </div><div class="eael-accordion-list">
-                <div id="quem-pode-tomar-maximum-alvio" class="elementor-tab-title eael-accordion-header" tabindex="0" data-tab="4" aria-controls="elementor-tab-content-1444"><span class="fa-toggle fa-toggle-svg eaa-svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M806.3,71.2c-16.9,0-30.6-13.7-30.6-30.6S789.3,10,806.3,10s30.6,13.7,30.6,30.6S823.2,71.2,806.3,71.2 M836.9,806.3H622.5c-20.6,0-39.7,6.8-55,18.3L374,969.7c-0.3,0.3-0.5,0.3-0.9,0.7c-15.6,12.3-35.4,19.7-56.8,19.7c-50.7,0-91.9-41.1-91.9-91.9v-61.3c0-16.9-13.7-30.6-30.6-30.6h-30.6c-67.7,0-122.5-54.8-122.5-122.5V132.5C40.6,64.8,95.5,10,163.1,10h520.6c16.9,0,30.6,13.7,30.6,30.6s-13.7,30.6-30.6,30.6H178.4c-42.3,0-76.6,34.3-76.6,76.6v520.6c0,42.3,34.3,76.6,76.6,76.6h30.6c42.3,0,76.6,34.3,76.6,76.6v76.6c0,16.9,13.7,30.6,30.6,30.6c6.5,0,12.5-2,17.4-5.4c0,0,0,0,0.1,0l194.9-146.2c0,0,0.1,0,0.1-0.1c25.9-20.1,58.4-32,93.7-32h199.1c42.3,0,76.6-34.3,76.6-76.6V163.1c0-16.9,13.7-30.6,30.6-30.6c16.9,0,30.6,13.7,30.6,30.6v520.6C959.4,751.4,904.5,806.3,836.9,806.3 M500,255c-50.7,0-91.9,41.1-91.9,91.9c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6c0-84.6,68.6-153.1,153.1-153.1c84.6,0,153.1,68.6,153.1,153.1c0,63.5-38.7,117.8-93.7,141c-0.1,0-0.1,0.1-0.1,0.1c-16.8,6.8-28.7,23.3-28.7,42.6c0,2.3-0.2,4.1-0.6,5.7c-2.7,14.2-15.1,25-30.1,25c-16.9,0-30.6-13.7-30.6-30.6c0-44.5,27.1-82.6,65.6-98.8c0,0,0.1,0,0.1-0.1c33.3-13.8,56.8-46.5,56.8-84.8C591.9,296.1,550.7,255,500,255 M500,622.5c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6C469.4,636.2,483.1,622.5,500,622.5"></path></g></svg></span><span class="eael-accordion-tab-title">Quem pode tomar Maximum Alívio?</span></div><div id="elementor-tab-content-1444" class="eael-accordion-content clearfix" data-tab="4" aria-labelledby="quem-pode-tomar-maximum-alvio"><div class="answer" data-v-51cba46a=""><p data-v-51cba46a="">Embora o Maximum Alívio seja 100% natural, orientamos que gestantes, lactantes e menores de 18 (dezoito) anos devem consumir o produto somente sob orientação de nutricionista ou médico.</p></div></div>
+                <div id="quem-pode-tomar-maximum-alvio" class="elementor-tab-title eael-accordion-header" tabindex="0" data-tab="4" aria-controls="elementor-tab-content-1444"><span class="fa-toggle fa-toggle-svg eaa-svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M806.3,71.2c-16.9,0-30.6-13.7-30.6-30.6S789.3,10,806.3,10s30.6,13.7,30.6,30.6S823.2,71.2,806.3,71.2 M836.9,806.3H622.5c-20.6,0-39.7,6.8-55,18.3L374,969.7c-0.3,0.3-0.5,0.3-0.9,0.7c-15.6,12.3-35.4,19.7-56.8,19.7c-50.7,0-91.9-41.1-91.9-91.9v-61.3c0-16.9-13.7-30.6-30.6-30.6h-30.6c-67.7,0-122.5-54.8-122.5-122.5V132.5C40.6,64.8,95.5,10,163.1,10h520.6c16.9,0,30.6,13.7,30.6,30.6s-13.7,30.6-30.6,30.6H178.4c-42.3,0-76.6,34.3-76.6,76.6v520.6c0,42.3,34.3,76.6,76.6,76.6h30.6c42.3,0,76.6,34.3,76.6,76.6v76.6c0,16.9,13.7,30.6,30.6,30.6c6.5,0,12.5-2,17.4-5.4c0,0,0,0,0.1,0l194.9-146.2c0,0,0.1,0,0.1-0.1c25.9-20.1,58.4-32,93.7-32h199.1c42.3,0,76.6-34.3,76.6-76.6V163.1c0-16.9,13.7-30.6,30.6-30.6c16.9,0,30.6,13.7,30.6,30.6v520.6C959.4,751.4,904.5,806.3,836.9,806.3 M500,255c-50.7,0-91.9,41.1-91.9,91.9c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6c0-84.6,68.6-153.1,153.1-153.1c84.6,0,153.1,68.6,153.1,153.1c0,63.5-38.7,117.8-93.7,141c-0.1,0-0.1,0.1-0.1,0.1c-16.8,6.8-28.7,23.3-28.7,42.6c0,2.3-0.2,4.1-0.6,5.7c-2.7,14.2-15.1,25-30.1,25c-16.9,0-30.6-13.7-30.6-30.6c0-44.5,27.1-82.6,65.6-98.8c0,0,0.1,0,0.1-0.1c33.3-13.8,56.8-46.5,56.8-84.8C591.9,296.1,550.7,255,500,255 M500,622.5c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6C469.4,636.2,483.1,622.5,500,622.5"></path></g></svg></span><span class="eael-accordion-tab-title">Quem pode tomar Maximum Alívio?</span></div><div id="elementor-tab-content-1444" class="eael-accordion-content clearfix" data-tab="4" aria-labelledby="quem-pode-tomar-maximum-alvio"><div class="answer" data-v-51cba46a=""><p>O Maximum Alívio é indicado para <strong>adultos que sofrem com dores articulares</strong>, como artrose, artrite, reumatismo, lombalgias, hérnia de disco, bursite, dores no ciático, joelho, ombro, pescoço e demais articulações. Por ser 100% natural, pode ser usado por homens e mulheres de qualquer idade. Gestantes, lactantes e menores de 18 anos devem consultar um médico antes do uso.</p></div></div>
                 </div></div>				</div>
 				</div>
 					</div>
@@ -1577,13 +1615,13 @@ Eu sei que mesmo depois do que te mostramos aqui, você pode ainda estar insegur
 				<div class="elementor-widget-container">
 					        <div class="eael-adv-accordion" id="eael-adv-accordion-61cf6178" data-scroll-on-click="no" data-scroll-speed="300" data-accordion-id="61cf6178" data-accordion-type="accordion" data-toogle-speed="300">
     <div class="eael-accordion-list">
-                <div id="por-quanto-tempo-devo-usar" class="elementor-tab-title eael-accordion-header active-default" tabindex="0" data-tab="1" aria-controls="elementor-tab-content-1641"><span class="fa-toggle fa-toggle-svg eaa-svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M806.3,71.2c-16.9,0-30.6-13.7-30.6-30.6S789.3,10,806.3,10s30.6,13.7,30.6,30.6S823.2,71.2,806.3,71.2 M836.9,806.3H622.5c-20.6,0-39.7,6.8-55,18.3L374,969.7c-0.3,0.3-0.5,0.3-0.9,0.7c-15.6,12.3-35.4,19.7-56.8,19.7c-50.7,0-91.9-41.1-91.9-91.9v-61.3c0-16.9-13.7-30.6-30.6-30.6h-30.6c-67.7,0-122.5-54.8-122.5-122.5V132.5C40.6,64.8,95.5,10,163.1,10h520.6c16.9,0,30.6,13.7,30.6,30.6s-13.7,30.6-30.6,30.6H178.4c-42.3,0-76.6,34.3-76.6,76.6v520.6c0,42.3,34.3,76.6,76.6,76.6h30.6c42.3,0,76.6,34.3,76.6,76.6v76.6c0,16.9,13.7,30.6,30.6,30.6c6.5,0,12.5-2,17.4-5.4c0,0,0,0,0.1,0l194.9-146.2c0,0,0.1,0,0.1-0.1c25.9-20.1,58.4-32,93.7-32h199.1c42.3,0,76.6-34.3,76.6-76.6V163.1c0-16.9,13.7-30.6,30.6-30.6c16.9,0,30.6,13.7,30.6,30.6v520.6C959.4,751.4,904.5,806.3,836.9,806.3 M500,255c-50.7,0-91.9,41.1-91.9,91.9c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6c0-84.6,68.6-153.1,153.1-153.1c84.6,0,153.1,68.6,153.1,153.1c0,63.5-38.7,117.8-93.7,141c-0.1,0-0.1,0.1-0.1,0.1c-16.8,6.8-28.7,23.3-28.7,42.6c0,2.3-0.2,4.1-0.6,5.7c-2.7,14.2-15.1,25-30.1,25c-16.9,0-30.6-13.7-30.6-30.6c0-44.5,27.1-82.6,65.6-98.8c0,0,0.1,0,0.1-0.1c33.3-13.8,56.8-46.5,56.8-84.8C591.9,296.1,550.7,255,500,255 M500,622.5c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6C469.4,636.2,483.1,622.5,500,622.5"></path></g></svg></span><span class="eael-accordion-tab-title">Por quanto tempo devo usar?</span></div><div id="elementor-tab-content-1641" class="eael-accordion-content clearfix active-default" data-tab="1" aria-labelledby="por-quanto-tempo-devo-usar"><p> É recomendado o tratamento de 3 ou 5 meses para obter os melhores resultados. No Entanto, algumas pessoas relatam efeitos consideráveis nas primeiras semanas.</p></div>
+                <div id="por-quanto-tempo-devo-usar" class="elementor-tab-title eael-accordion-header active-default" tabindex="0" data-tab="1" aria-controls="elementor-tab-content-1641"><span class="fa-toggle fa-toggle-svg eaa-svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M806.3,71.2c-16.9,0-30.6-13.7-30.6-30.6S789.3,10,806.3,10s30.6,13.7,30.6,30.6S823.2,71.2,806.3,71.2 M836.9,806.3H622.5c-20.6,0-39.7,6.8-55,18.3L374,969.7c-0.3,0.3-0.5,0.3-0.9,0.7c-15.6,12.3-35.4,19.7-56.8,19.7c-50.7,0-91.9-41.1-91.9-91.9v-61.3c0-16.9-13.7-30.6-30.6-30.6h-30.6c-67.7,0-122.5-54.8-122.5-122.5V132.5C40.6,64.8,95.5,10,163.1,10h520.6c16.9,0,30.6,13.7,30.6,30.6s-13.7,30.6-30.6,30.6H178.4c-42.3,0-76.6,34.3-76.6,76.6v520.6c0,42.3,34.3,76.6,76.6,76.6h30.6c42.3,0,76.6,34.3,76.6,76.6v76.6c0,16.9,13.7,30.6,30.6,30.6c6.5,0,12.5-2,17.4-5.4c0,0,0,0,0.1,0l194.9-146.2c0,0,0.1,0,0.1-0.1c25.9-20.1,58.4-32,93.7-32h199.1c42.3,0,76.6-34.3,76.6-76.6V163.1c0-16.9,13.7-30.6,30.6-30.6c16.9,0,30.6,13.7,30.6,30.6v520.6C959.4,751.4,904.5,806.3,836.9,806.3 M500,255c-50.7,0-91.9,41.1-91.9,91.9c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6c0-84.6,68.6-153.1,153.1-153.1c84.6,0,153.1,68.6,153.1,153.1c0,63.5-38.7,117.8-93.7,141c-0.1,0-0.1,0.1-0.1,0.1c-16.8,6.8-28.7,23.3-28.7,42.6c0,2.3-0.2,4.1-0.6,5.7c-2.7,14.2-15.1,25-30.1,25c-16.9,0-30.6-13.7-30.6-30.6c0-44.5,27.1-82.6,65.6-98.8c0,0,0.1,0,0.1-0.1c33.3-13.8,56.8-46.5,56.8-84.8C591.9,296.1,550.7,255,500,255 M500,622.5c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6C469.4,636.2,483.1,622.5,500,622.5"></path></g></svg></span><span class="eael-accordion-tab-title">Por quanto tempo devo usar?</span></div><div id="elementor-tab-content-1641" class="eael-accordion-content clearfix active-default" data-tab="1" aria-labelledby="por-quanto-tempo-devo-usar"><p>Recomendamos o tratamento por <strong>3 a 5 meses</strong> para resultados completos e duradouros. O Maximum Alívio age em 2 etapas: nos primeiros dias, reduz as dores rapidamente; ao longo do tratamento, restaura as cartilagens desgastadas, atuando na causa raiz do problema. Muitos usuários relatam alívio já <strong>nos primeiros 3 dias</strong>. Para uma recuperação completa e definitiva, o tratamento de 5 meses é o mais indicado.</p></div>
                 </div><div class="eael-accordion-list">
-                <div id="qual-o-prazo-de-entrega" class="elementor-tab-title eael-accordion-header" tabindex="0" data-tab="2" aria-controls="elementor-tab-content-1642"><span class="fa-toggle fa-toggle-svg eaa-svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M806.3,71.2c-16.9,0-30.6-13.7-30.6-30.6S789.3,10,806.3,10s30.6,13.7,30.6,30.6S823.2,71.2,806.3,71.2 M836.9,806.3H622.5c-20.6,0-39.7,6.8-55,18.3L374,969.7c-0.3,0.3-0.5,0.3-0.9,0.7c-15.6,12.3-35.4,19.7-56.8,19.7c-50.7,0-91.9-41.1-91.9-91.9v-61.3c0-16.9-13.7-30.6-30.6-30.6h-30.6c-67.7,0-122.5-54.8-122.5-122.5V132.5C40.6,64.8,95.5,10,163.1,10h520.6c16.9,0,30.6,13.7,30.6,30.6s-13.7,30.6-30.6,30.6H178.4c-42.3,0-76.6,34.3-76.6,76.6v520.6c0,42.3,34.3,76.6,76.6,76.6h30.6c42.3,0,76.6,34.3,76.6,76.6v76.6c0,16.9,13.7,30.6,30.6,30.6c6.5,0,12.5-2,17.4-5.4c0,0,0,0,0.1,0l194.9-146.2c0,0,0.1,0,0.1-0.1c25.9-20.1,58.4-32,93.7-32h199.1c42.3,0,76.6-34.3,76.6-76.6V163.1c0-16.9,13.7-30.6,30.6-30.6c16.9,0,30.6,13.7,30.6,30.6v520.6C959.4,751.4,904.5,806.3,836.9,806.3 M500,255c-50.7,0-91.9,41.1-91.9,91.9c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6c0-84.6,68.6-153.1,153.1-153.1c84.6,0,153.1,68.6,153.1,153.1c0,63.5-38.7,117.8-93.7,141c-0.1,0-0.1,0.1-0.1,0.1c-16.8,6.8-28.7,23.3-28.7,42.6c0,2.3-0.2,4.1-0.6,5.7c-2.7,14.2-15.1,25-30.1,25c-16.9,0-30.6-13.7-30.6-30.6c0-44.5,27.1-82.6,65.6-98.8c0,0,0.1,0,0.1-0.1c33.3-13.8,56.8-46.5,56.8-84.8C591.9,296.1,550.7,255,500,255 M500,622.5c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6C469.4,636.2,483.1,622.5,500,622.5"></path></g></svg></span><span class="eael-accordion-tab-title">Qual o prazo de entrega?</span></div><div id="elementor-tab-content-1642" class="eael-accordion-content clearfix" data-tab="2" aria-labelledby="qual-o-prazo-de-entrega"><div id="elementor-tab-content-5792" class="elementor-tab-content elementor-clearfix elementor-active" role="tabpanel" data-tab="2" aria-labelledby="elementor-tab-title-5792"><div id="elementor-tab-content-9921" class="elementor-tab-content elementor-clearfix elementor-active" role="tabpanel" data-tab="1" aria-labelledby="elementor-tab-title-9921"><p>O prazo médio de entrega do Produto para o Brasil é de 5 a 10 dias úteis( prazo do correio). O produto só é enviado após a confirmação do seu pagamento pela administradora do seu cartão de crédito ou após a confirmação do pagamento do boleto.</p></div></div></div>
+                <div id="qual-o-prazo-de-entrega" class="elementor-tab-title eael-accordion-header" tabindex="0" data-tab="2" aria-controls="elementor-tab-content-1642"><span class="fa-toggle fa-toggle-svg eaa-svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M806.3,71.2c-16.9,0-30.6-13.7-30.6-30.6S789.3,10,806.3,10s30.6,13.7,30.6,30.6S823.2,71.2,806.3,71.2 M836.9,806.3H622.5c-20.6,0-39.7,6.8-55,18.3L374,969.7c-0.3,0.3-0.5,0.3-0.9,0.7c-15.6,12.3-35.4,19.7-56.8,19.7c-50.7,0-91.9-41.1-91.9-91.9v-61.3c0-16.9-13.7-30.6-30.6-30.6h-30.6c-67.7,0-122.5-54.8-122.5-122.5V132.5C40.6,64.8,95.5,10,163.1,10h520.6c16.9,0,30.6,13.7,30.6,30.6s-13.7,30.6-30.6,30.6H178.4c-42.3,0-76.6,34.3-76.6,76.6v520.6c0,42.3,34.3,76.6,76.6,76.6h30.6c42.3,0,76.6,34.3,76.6,76.6v76.6c0,16.9,13.7,30.6,30.6,30.6c6.5,0,12.5-2,17.4-5.4c0,0,0,0,0.1,0l194.9-146.2c0,0,0.1,0,0.1-0.1c25.9-20.1,58.4-32,93.7-32h199.1c42.3,0,76.6-34.3,76.6-76.6V163.1c0-16.9,13.7-30.6,30.6-30.6c16.9,0,30.6,13.7,30.6,30.6v520.6C959.4,751.4,904.5,806.3,836.9,806.3 M500,255c-50.7,0-91.9,41.1-91.9,91.9c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6c0-84.6,68.6-153.1,153.1-153.1c84.6,0,153.1,68.6,153.1,153.1c0,63.5-38.7,117.8-93.7,141c-0.1,0-0.1,0.1-0.1,0.1c-16.8,6.8-28.7,23.3-28.7,42.6c0,2.3-0.2,4.1-0.6,5.7c-2.7,14.2-15.1,25-30.1,25c-16.9,0-30.6-13.7-30.6-30.6c0-44.5,27.1-82.6,65.6-98.8c0,0,0.1,0,0.1-0.1c33.3-13.8,56.8-46.5,56.8-84.8C591.9,296.1,550.7,255,500,255 M500,622.5c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6C469.4,636.2,483.1,622.5,500,622.5"></path></g></svg></span><span class="eael-accordion-tab-title">Qual o prazo de entrega?</span></div><div id="elementor-tab-content-1642" class="eael-accordion-content clearfix" data-tab="2" aria-labelledby="qual-o-prazo-de-entrega"><div id="elementor-tab-content-5792" class="elementor-tab-content elementor-clearfix elementor-active" role="tabpanel" data-tab="2" aria-labelledby="elementor-tab-title-5792"><div id="elementor-tab-content-9921" class="elementor-tab-content elementor-clearfix elementor-active" role="tabpanel" data-tab="1" aria-labelledby="elementor-tab-title-9921"><p>O prazo de entrega para todo o Brasil é de <strong>5 a 15 dias úteis</strong> após a confirmação do pagamento. Para cartão de crédito a confirmação é automática; para boleto, o prazo começa após a compensação (1 a 3 dias úteis). Você receberá o código de rastreio por e-mail assim que seu pedido for despachado.</p></div></div></div>
                 </div><div class="eael-accordion-list">
-                <div id="-seguro-comprar-neste-site" class="elementor-tab-title eael-accordion-header" tabindex="0" data-tab="3" aria-controls="elementor-tab-content-1643"><span class="fa-toggle fa-toggle-svg eaa-svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M806.3,71.2c-16.9,0-30.6-13.7-30.6-30.6S789.3,10,806.3,10s30.6,13.7,30.6,30.6S823.2,71.2,806.3,71.2 M836.9,806.3H622.5c-20.6,0-39.7,6.8-55,18.3L374,969.7c-0.3,0.3-0.5,0.3-0.9,0.7c-15.6,12.3-35.4,19.7-56.8,19.7c-50.7,0-91.9-41.1-91.9-91.9v-61.3c0-16.9-13.7-30.6-30.6-30.6h-30.6c-67.7,0-122.5-54.8-122.5-122.5V132.5C40.6,64.8,95.5,10,163.1,10h520.6c16.9,0,30.6,13.7,30.6,30.6s-13.7,30.6-30.6,30.6H178.4c-42.3,0-76.6,34.3-76.6,76.6v520.6c0,42.3,34.3,76.6,76.6,76.6h30.6c42.3,0,76.6,34.3,76.6,76.6v76.6c0,16.9,13.7,30.6,30.6,30.6c6.5,0,12.5-2,17.4-5.4c0,0,0,0,0.1,0l194.9-146.2c0,0,0.1,0,0.1-0.1c25.9-20.1,58.4-32,93.7-32h199.1c42.3,0,76.6-34.3,76.6-76.6V163.1c0-16.9,13.7-30.6,30.6-30.6c16.9,0,30.6,13.7,30.6,30.6v520.6C959.4,751.4,904.5,806.3,836.9,806.3 M500,255c-50.7,0-91.9,41.1-91.9,91.9c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6c0-84.6,68.6-153.1,153.1-153.1c84.6,0,153.1,68.6,153.1,153.1c0,63.5-38.7,117.8-93.7,141c-0.1,0-0.1,0.1-0.1,0.1c-16.8,6.8-28.7,23.3-28.7,42.6c0,2.3-0.2,4.1-0.6,5.7c-2.7,14.2-15.1,25-30.1,25c-16.9,0-30.6-13.7-30.6-30.6c0-44.5,27.1-82.6,65.6-98.8c0,0,0.1,0,0.1-0.1c33.3-13.8,56.8-46.5,56.8-84.8C591.9,296.1,550.7,255,500,255 M500,622.5c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6C469.4,636.2,483.1,622.5,500,622.5"></path></g></svg></span><span class="eael-accordion-tab-title">É seguro comprar neste site?</span></div><div id="elementor-tab-content-1643" class="eael-accordion-content clearfix" data-tab="3" aria-labelledby="-seguro-comprar-neste-site"><div id="ui-id-12" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" role="tabpanel" aria-labelledby="ui-id-11" aria-hidden="false"><p class="text black perguntas">Esse site é <strong>BLINDADO</strong> e 100% protegido!</p><p class="text black perguntas">Utilizamos a plataforma de pagamento para processar todos os pagamento.É uma das maiores plataformas de pagamento online da América Latina e utiliza os mais avançados recursos de segurança para Pagamentos Online disponíveis no mundo.</p><p class="text black perguntas">Suas informações pessoais são sigilosas e criptografadas no momento do pagamento (você está completamente segura).</p></div></div>
+                <div id="-seguro-comprar-neste-site" class="elementor-tab-title eael-accordion-header" tabindex="0" data-tab="3" aria-controls="elementor-tab-content-1643"><span class="fa-toggle fa-toggle-svg eaa-svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M806.3,71.2c-16.9,0-30.6-13.7-30.6-30.6S789.3,10,806.3,10s30.6,13.7,30.6,30.6S823.2,71.2,806.3,71.2 M836.9,806.3H622.5c-20.6,0-39.7,6.8-55,18.3L374,969.7c-0.3,0.3-0.5,0.3-0.9,0.7c-15.6,12.3-35.4,19.7-56.8,19.7c-50.7,0-91.9-41.1-91.9-91.9v-61.3c0-16.9-13.7-30.6-30.6-30.6h-30.6c-67.7,0-122.5-54.8-122.5-122.5V132.5C40.6,64.8,95.5,10,163.1,10h520.6c16.9,0,30.6,13.7,30.6,30.6s-13.7,30.6-30.6,30.6H178.4c-42.3,0-76.6,34.3-76.6,76.6v520.6c0,42.3,34.3,76.6,76.6,76.6h30.6c42.3,0,76.6,34.3,76.6,76.6v76.6c0,16.9,13.7,30.6,30.6,30.6c6.5,0,12.5-2,17.4-5.4c0,0,0,0,0.1,0l194.9-146.2c0,0,0.1,0,0.1-0.1c25.9-20.1,58.4-32,93.7-32h199.1c42.3,0,76.6-34.3,76.6-76.6V163.1c0-16.9,13.7-30.6,30.6-30.6c16.9,0,30.6,13.7,30.6,30.6v520.6C959.4,751.4,904.5,806.3,836.9,806.3 M500,255c-50.7,0-91.9,41.1-91.9,91.9c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6c0-84.6,68.6-153.1,153.1-153.1c84.6,0,153.1,68.6,153.1,153.1c0,63.5-38.7,117.8-93.7,141c-0.1,0-0.1,0.1-0.1,0.1c-16.8,6.8-28.7,23.3-28.7,42.6c0,2.3-0.2,4.1-0.6,5.7c-2.7,14.2-15.1,25-30.1,25c-16.9,0-30.6-13.7-30.6-30.6c0-44.5,27.1-82.6,65.6-98.8c0,0,0.1,0,0.1-0.1c33.3-13.8,56.8-46.5,56.8-84.8C591.9,296.1,550.7,255,500,255 M500,622.5c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6C469.4,636.2,483.1,622.5,500,622.5"></path></g></svg></span><span class="eael-accordion-tab-title">É seguro comprar neste site?</span></div><div id="elementor-tab-content-1643" class="eael-accordion-content clearfix" data-tab="3" aria-labelledby="-seguro-comprar-neste-site"><div id="ui-id-12" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" role="tabpanel" aria-labelledby="ui-id-11" aria-hidden="false"><p><strong>Sim, é totalmente seguro!</strong> Este site conta com <strong>certificado SSL</strong> e toda sua navegação é 100% criptografada e protegida. As transações financeiras são processadas por uma das maiores plataformas de pagamento da América Latina, com os mais avançados protocolos de segurança do mundo. Seus dados pessoais são sigilosos e nunca são compartilhados com terceiros. Você pode comprar com total tranquilidade e confiança.</p></div></div>
                 </div><div class="eael-accordion-list">
-                <div id="posso-parcelar-por-boleto" class="elementor-tab-title eael-accordion-header" tabindex="0" data-tab="4" aria-controls="elementor-tab-content-1644"><span class="fa-toggle fa-toggle-svg eaa-svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M806.3,71.2c-16.9,0-30.6-13.7-30.6-30.6S789.3,10,806.3,10s30.6,13.7,30.6,30.6S823.2,71.2,806.3,71.2 M836.9,806.3H622.5c-20.6,0-39.7,6.8-55,18.3L374,969.7c-0.3,0.3-0.5,0.3-0.9,0.7c-15.6,12.3-35.4,19.7-56.8,19.7c-50.7,0-91.9-41.1-91.9-91.9v-61.3c0-16.9-13.7-30.6-30.6-30.6h-30.6c-67.7,0-122.5-54.8-122.5-122.5V132.5C40.6,64.8,95.5,10,163.1,10h520.6c16.9,0,30.6,13.7,30.6,30.6s-13.7,30.6-30.6,30.6H178.4c-42.3,0-76.6,34.3-76.6,76.6v520.6c0,42.3,34.3,76.6,76.6,76.6h30.6c42.3,0,76.6,34.3,76.6,76.6v76.6c0,16.9,13.7,30.6,30.6,30.6c6.5,0,12.5-2,17.4-5.4c0,0,0,0,0.1,0l194.9-146.2c0,0,0.1,0,0.1-0.1c25.9-20.1,58.4-32,93.7-32h199.1c42.3,0,76.6-34.3,76.6-76.6V163.1c0-16.9,13.7-30.6,30.6-30.6c16.9,0,30.6,13.7,30.6,30.6v520.6C959.4,751.4,904.5,806.3,836.9,806.3 M500,255c-50.7,0-91.9,41.1-91.9,91.9c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6c0-84.6,68.6-153.1,153.1-153.1c84.6,0,153.1,68.6,153.1,153.1c0,63.5-38.7,117.8-93.7,141c-0.1,0-0.1,0.1-0.1,0.1c-16.8,6.8-28.7,23.3-28.7,42.6c0,2.3-0.2,4.1-0.6,5.7c-2.7,14.2-15.1,25-30.1,25c-16.9,0-30.6-13.7-30.6-30.6c0-44.5,27.1-82.6,65.6-98.8c0,0,0.1,0,0.1-0.1c33.3-13.8,56.8-46.5,56.8-84.8C591.9,296.1,550.7,255,500,255 M500,622.5c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6C469.4,636.2,483.1,622.5,500,622.5"></path></g></svg></span><span class="eael-accordion-tab-title">Posso parcelar por boleto?</span></div><div id="elementor-tab-content-1644" class="eael-accordion-content clearfix" data-tab="4" aria-labelledby="posso-parcelar-por-boleto"><p>O parcelamento só está disponível para cartões de crédito.</p></div>
+                <div id="posso-parcelar-por-boleto" class="elementor-tab-title eael-accordion-header" tabindex="0" data-tab="4" aria-controls="elementor-tab-content-1644"><span class="fa-toggle fa-toggle-svg eaa-svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M806.3,71.2c-16.9,0-30.6-13.7-30.6-30.6S789.3,10,806.3,10s30.6,13.7,30.6,30.6S823.2,71.2,806.3,71.2 M836.9,806.3H622.5c-20.6,0-39.7,6.8-55,18.3L374,969.7c-0.3,0.3-0.5,0.3-0.9,0.7c-15.6,12.3-35.4,19.7-56.8,19.7c-50.7,0-91.9-41.1-91.9-91.9v-61.3c0-16.9-13.7-30.6-30.6-30.6h-30.6c-67.7,0-122.5-54.8-122.5-122.5V132.5C40.6,64.8,95.5,10,163.1,10h520.6c16.9,0,30.6,13.7,30.6,30.6s-13.7,30.6-30.6,30.6H178.4c-42.3,0-76.6,34.3-76.6,76.6v520.6c0,42.3,34.3,76.6,76.6,76.6h30.6c42.3,0,76.6,34.3,76.6,76.6v76.6c0,16.9,13.7,30.6,30.6,30.6c6.5,0,12.5-2,17.4-5.4c0,0,0,0,0.1,0l194.9-146.2c0,0,0.1,0,0.1-0.1c25.9-20.1,58.4-32,93.7-32h199.1c42.3,0,76.6-34.3,76.6-76.6V163.1c0-16.9,13.7-30.6,30.6-30.6c16.9,0,30.6,13.7,30.6,30.6v520.6C959.4,751.4,904.5,806.3,836.9,806.3 M500,255c-50.7,0-91.9,41.1-91.9,91.9c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6c0-84.6,68.6-153.1,153.1-153.1c84.6,0,153.1,68.6,153.1,153.1c0,63.5-38.7,117.8-93.7,141c-0.1,0-0.1,0.1-0.1,0.1c-16.8,6.8-28.7,23.3-28.7,42.6c0,2.3-0.2,4.1-0.6,5.7c-2.7,14.2-15.1,25-30.1,25c-16.9,0-30.6-13.7-30.6-30.6c0-44.5,27.1-82.6,65.6-98.8c0,0,0.1,0,0.1-0.1c33.3-13.8,56.8-46.5,56.8-84.8C591.9,296.1,550.7,255,500,255 M500,622.5c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6c-16.9,0-30.6-13.7-30.6-30.6C469.4,636.2,483.1,622.5,500,622.5"></path></g></svg></span><span class="eael-accordion-tab-title">Posso parcelar por boleto?</span></div><div id="elementor-tab-content-1644" class="eael-accordion-content clearfix" data-tab="4" aria-labelledby="posso-parcelar-por-boleto"><p>O parcelamento em <strong>até 12x sem juros</strong> está disponível para pagamentos com <strong>cartão de crédito</strong>. O boleto bancário e o PIX estão disponíveis para pagamento à vista. Aceitamos os principais cartões do mercado: Visa, Mastercard, Elo, Amex e outros.</p></div>
                 </div></div>				</div>
 				</div>
 					</div>
@@ -1677,7 +1715,7 @@ Eu sei que mesmo depois do que te mostramos aqui, você pode ainda estar insegur
 				<div class="elementor-widget-container">
 					        <div class="eael-creative-button-wrapper">
 
-            <a class="eael-creative-button eael-creative-button--default" href="https://api.whatsapp.com/send?phone=5519996427407" data-text="">
+            <a class="eael-creative-button eael-creative-button--default" href="https://wa.me/5565992831247" data-text="">
 
 	    
                 <div class="creative-button-inner">
@@ -2430,6 +2468,350 @@ img {
   });
 })();
 </script>
+
+<!-- ===== FIX4: CAROUSEL ARROWS MOBILE + GUARANTEE MOBILE + WHATSAPP ===== -->
+<style id="fix4-css">
+
+/* ---- CAROUSEL ARROWS: centered vertically, well distributed ---- */
+.elementor-testimonial-carousel {
+  position: relative !important;
+}
+/* Make the swiper wrapper the positioning context */
+.elementor-testimonial-carousel .elementor-swiper {
+  position: relative !important;
+}
+/* Arrow base */
+.elementor-testimonial-carousel .elementor-swiper-button {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 20 !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(21, 101, 192, 0.9) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.3) !important;
+  transition: background 0.2s, transform 0.15s !important;
+  margin-top: 0 !important;
+}
+.elementor-testimonial-carousel .elementor-swiper-button:hover {
+  background: rgba(13, 71, 161, 1) !important;
+  transform: translateY(-50%) scale(1.08) !important;
+}
+.elementor-testimonial-carousel .elementor-swiper-button-prev {
+  left: 2px !important;
+  right: auto !important;
+}
+.elementor-testimonial-carousel .elementor-swiper-button-next {
+  right: 2px !important;
+  left: auto !important;
+}
+/* Mobile: arrows inside the carousel, centered vertically */
+@media (max-width: 767px) {
+  .elementor-testimonial-carousel {
+    padding: 0 44px !important;
+  }
+  .elementor-testimonial-carousel .elementor-swiper-button {
+    width: 36px !important;
+    height: 36px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  .elementor-testimonial-carousel .elementor-swiper-button-prev {
+    left: 0px !important;
+  }
+  .elementor-testimonial-carousel .elementor-swiper-button-next {
+    right: 0px !important;
+  }
+}
+
+/* ---- GUARANTEE SECTION: show images on mobile ---- */
+/* Override the .none hide for these two specific elements */
+.elementor-element-29050908.none,
+.elementor-element-148e9cc9.none {
+  display: block !important;
+}
+/* Guarantee seal - repositioned for mobile */
+@media (max-width: 767px) {
+  /* Switch to relative for mobile so they flow naturally */
+  .elementor-element-396b8e15 {
+    position: relative !important;
+    overflow: visible !important;
+  }
+  /* Make the outer column relative for proper stacking */
+  .elementor-element-4c2dce1f > .elementor-element-populated {
+    position: relative !important;
+    padding-bottom: 20px !important;
+  }
+  /* Guarantee seal (30 dias) */
+  .elementor-element-29050908 {
+    position: relative !important;
+    width: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 10px !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+  }
+  .elementor-element-29050908 img {
+    width: 120px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+  /* Product bottle */
+  .elementor-element-148e9cc9 {
+    position: relative !important;
+    width: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 16px !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+  }
+  .elementor-element-148e9cc9 img {
+    width: 140px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+  /* Inner gradient section - add padding for items */
+  .elementor-element-4a54b8f7 {
+    padding: 20px 16px 100px !important;
+  }
+}
+
+/* ---- WHATSAPP FLOATING BUTTON ---- */
+#whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+#whatsapp-float .wa-circle {
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(37,211,102,0.55);
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: waPulse 2.5s ease-in-out infinite;
+}
+#whatsapp-float:hover .wa-circle {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(37,211,102,0.7);
+  animation: none;
+}
+#whatsapp-float .wa-circle svg {
+  width: 32px;
+  height: 32px;
+  fill: #fff;
+}
+#whatsapp-float .wa-tooltip {
+  background: #fff;
+  color: #333;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 13px;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(8px);
+  transition: opacity 0.25s, transform 0.25s;
+  pointer-events: none;
+}
+#whatsapp-float:hover .wa-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+@keyframes waPulse {
+  0%, 100% { box-shadow: 0 4px 18px rgba(37,211,102,0.55); }
+  50%       { box-shadow: 0 4px 30px rgba(37,211,102,0.85); }
+}
+@media (max-width: 480px) {
+  #whatsapp-float { bottom: 18px; right: 14px; }
+  #whatsapp-float .wa-circle { width: 52px; height: 52px; }
+  #whatsapp-float .wa-tooltip { display: none; }
+}
+</style>
+
+<!-- ===== FIX5: ARROWS + GUARANTEE + FAQ (JS overrides) ===== -->
+<style id="fix5-css">
+/* FAQ accordion visual */
+.eael-adv-accordion .eael-accordion-list { margin-bottom: 6px !important; }
+.eael-adv-accordion .eael-accordion-header {
+  cursor: pointer !important;
+  user-select: none !important;
+  transition: background 0.2s !important;
+}
+.eael-adv-accordion .eael-accordion-header.faq-open {
+  background: rgba(21,101,192,0.15) !important;
+}
+.eael-adv-accordion .eael-accordion-content {
+  display: none !important;
+  padding: 14px 16px !important;
+  background: #fff !important;
+  border: 1px solid #e0eaf8 !important;
+  border-radius: 0 0 6px 6px !important;
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+  color: #333 !important;
+}
+.eael-adv-accordion .eael-accordion-content.faq-visible {
+  display: block !important;
+}
+.eael-adv-accordion .eael-accordion-content p { margin: 0 !important; }
+
+/* Guarantee: mobile outer section no clip */
+@media (max-width: 767px) {
+  .elementor-element-396b8e15 { overflow: visible !important; }
+  .elementor-element-4c2dce1f > .elementor-element-populated { overflow: visible !important; }
+  .elementor-element-29050908 img { width: 110px !important; height: auto !important; }
+  .elementor-element-148e9cc9 img { width: 140px !important; height: auto !important; }
+}
+
+/* Carousel positioning context */
+#slide .elementor-swiper { position: relative !important; overflow: visible !important; }
+#slide .elementor-main-swiper { overflow: hidden !important; }
+</style>
+
+<script id="fix5-js">
+(function() {
+  'use strict';
+
+  function imp(el, prop, val) { el.style.setProperty(prop, val, 'important'); }
+
+  document.addEventListener('DOMContentLoaded', function() {
+
+    /* ---- 1. CAROUSEL ARROWS ---- */
+    function fixArrows() {
+      var widget = document.getElementById('slide');
+      if (!widget) return;
+      var swiper = widget.querySelector('.elementor-main-swiper');
+      var prev   = widget.querySelector('.elementor-swiper-button-prev');
+      var next   = widget.querySelector('.elementor-swiper-button-next');
+      var wrap   = widget.querySelector('.elementor-swiper');
+      if (!swiper || !prev || !next || !wrap) return;
+
+      imp(wrap, 'position', 'relative');
+
+      function place() {
+        var h = swiper.offsetHeight;
+        if (h < 10) { setTimeout(place, 150); return; }
+        var t = (h / 2) + 'px';
+        [prev, next].forEach(function(btn) {
+          imp(btn, 'position', 'absolute');
+          imp(btn, 'top', t);
+          imp(btn, 'transform', 'translateY(-50%)');
+          imp(btn, 'z-index', '20');
+          imp(btn, 'width', '38px');
+          imp(btn, 'height', '38px');
+          imp(btn, 'border-radius', '50%');
+          imp(btn, 'background', 'rgba(21,101,192,0.9)');
+          imp(btn, 'display', 'flex');
+          imp(btn, 'align-items', 'center');
+          imp(btn, 'justify-content', 'center');
+          imp(btn, 'cursor', 'pointer');
+          imp(btn, 'box-shadow', '0 3px 12px rgba(0,0,0,0.3)');
+          imp(btn, 'margin', '0');
+        });
+        imp(prev, 'left', '2px');   imp(prev, 'right', 'auto');
+        imp(next, 'right', '2px');  imp(next, 'left', 'auto');
+      }
+      setTimeout(place, 500);
+    }
+    fixArrows();
+    window.addEventListener('resize', function() { setTimeout(fixArrows, 200); });
+
+    /* ---- 2. GUARANTEE SECTION MOBILE ---- */
+    function fixGuarantee() {
+      if (window.innerWidth > 767) return;
+      var seal   = document.querySelector('.elementor-element-29050908');
+      var bottle = document.querySelector('.elementor-element-148e9cc9');
+      if (!seal || !bottle) return;
+
+      function resetPos(el) {
+        imp(el, 'position', 'relative'); imp(el, 'top', 'auto'); imp(el, 'bottom', 'auto');
+        imp(el, 'left', 'auto'); imp(el, 'right', 'auto');
+        imp(el, 'display', 'block'); imp(el, 'width', '100%'); imp(el, 'text-align', 'center');
+      }
+      resetPos(seal);   imp(seal, 'padding', '10px 0 0');
+      resetPos(bottle); imp(bottle, 'padding', '16px 0 8px');
+
+      var sI = seal.querySelector('img');
+      if (sI) { imp(sI, 'width', '110px'); imp(sI, 'height', 'auto'); imp(sI, 'margin', '0 auto'); imp(sI, 'display', 'block'); }
+      var bI = bottle.querySelector('img');
+      if (bI) { imp(bI, 'width', '140px'); imp(bI, 'height', 'auto'); imp(bI, 'margin', '0 auto'); imp(bI, 'display', 'block'); }
+
+      var innerSection = document.querySelector('.elementor-element-4a54b8f7');
+      var outerWrap    = document.querySelector('.elementor-element-4c2dce1f > .elementor-element-populated');
+      if (innerSection && outerWrap) outerWrap.insertBefore(seal, innerSection);
+
+      var innerWrap = innerSection ? innerSection.querySelector('.elementor-widget-wrap') : null;
+      if (innerWrap) innerWrap.appendChild(bottle);
+    }
+    fixGuarantee();
+
+    /* ---- 3. FAQ ACCORDION ---- */
+    function initFAQ() {
+      document.querySelectorAll('.eael-adv-accordion .eael-accordion-list').forEach(function(item) {
+        var header    = item.querySelector('.eael-accordion-header');
+        var contentEl = item.querySelector('.eael-accordion-content');
+        if (!header || !contentEl) return;
+
+        /* Remove active-default open state - start all closed */
+        contentEl.classList.remove('faq-visible');
+
+        var newHeader = header.cloneNode(true);
+        header.parentNode.replaceChild(newHeader, header);
+        header = newHeader;
+
+        header.addEventListener('click', function() {
+          var isOpen = contentEl.classList.contains('faq-visible');
+          var accordion = item.closest('.eael-adv-accordion');
+          if (accordion) {
+            accordion.querySelectorAll('.eael-accordion-content').forEach(function(c) { c.classList.remove('faq-visible'); });
+            accordion.querySelectorAll('.eael-accordion-header').forEach(function(h) { h.classList.remove('faq-open'); });
+          }
+          if (!isOpen) {
+            contentEl.classList.add('faq-visible');
+            header.classList.add('faq-open');
+          }
+        });
+      });
+    }
+    initFAQ();
+
+  });
+})();
+</script>
+
+<!-- WhatsApp Floating Button -->
+<a id="whatsapp-float" href="https://wa.me/5565992831247" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <span class="wa-tooltip">Falar no WhatsApp</span>
+  <div class="wa-circle">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 0C7.163 0 0 7.163 0 16c0 2.829.74 5.484 2.035 7.789L0 32l8.42-2.007A15.93 15.93 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.28 13.28 0 01-6.773-1.848l-.486-.287-4.998 1.191 1.27-4.867-.317-.5A13.285 13.285 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.273-9.987c-.398-.2-2.356-1.161-2.72-1.294-.365-.133-.631-.2-.897.2-.266.399-1.03 1.294-1.263 1.56-.233.266-.465.3-.863.1-.398-.2-1.68-.619-3.2-1.973-1.183-1.054-1.981-2.355-2.213-2.754-.232-.398-.025-.613.175-.812.179-.179.398-.465.597-.698.2-.232.266-.398.399-.664.132-.266.066-.499-.034-.698-.1-.2-.896-2.16-1.228-2.958-.323-.776-.65-.671-.897-.683l-.763-.013c-.266 0-.697.1-.1063.498-.365.398-1.395 1.362-1.395 3.322 0 1.96 1.428 3.853 1.627 4.12.2.266 2.81 4.291 6.809 6.018.952.41 1.695.655 2.273.839.955.303 1.824.26 2.511.158.766-.114 2.356-.963 2.688-1.893.333-.93.333-1.727.233-1.893-.099-.166-.365-.266-.763-.465z"/>
+    </svg>
+  </div>
+</a>
+
 </body>
 </html>
 
