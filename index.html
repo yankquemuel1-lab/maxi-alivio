@@ -10,7 +10,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-  <!-- Meta Pixel Code (DESATIVADO TEMPORARIAMENTE)
+  <!-- Google Ads Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16594638762"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-16594638762');
+  </script>
+  <!-- End Google Ads Tag -->
+
+  <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -25,6 +35,7 @@
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=26905366805730496&ev=PageView&noscript=1"
   /></noscript>
+  <!-- Meta Conversions API (CAPI) — server-side via Vercel -->
   <script>
   (function() {
     function getCookie(name) {
@@ -38,13 +49,13 @@
         event_name: 'PageView',
         event_source_url: window.location.href,
         client_user_agent: navigator.userAgent,
-        fbc:  getCookie('_fbc'),
-        fbp:  getCookie('_fbp'),
+        fbc: getCookie('_fbc'),
+        fbp: getCookie('_fbp'),
       })
     }).catch(function(){});
   })();
   </script>
-  End Meta Pixel Code -->
+  <!-- End Meta Pixel Code -->
 
   <style>
   /* ====== COLLECTED SITE CSS ====== */
@@ -1284,7 +1295,7 @@ Com base nos resultados enviados por consumidores fieis, indicamos os kits de 3 
 				<div class="elementor-widget-container">
 					        <div class="eael-creative-button-wrapper">
 
-            <a class="eael-creative-button eael-creative-button--wayra" href="https://ev.braip.com/checkout/plaxp4g0/chevljvg?pl=plaxp4g0&#038;ck=chevljvg&#038;af=afi9egl1zj&#038;currency=BRL" data-text="Go!">
+            <a class="eael-creative-button eael-creative-button--wayra" href="https://ev.braip.com/campanhas/cpa/cam69m4vj" data-text="Go!">
 
 	    
                 <div class="creative-button-inner">
@@ -1348,7 +1359,7 @@ Com base nos resultados enviados por consumidores fieis, indicamos os kits de 3 
 				<div class="elementor-widget-container">
 					        <div class="eael-creative-button-wrapper">
 
-            <a class="eael-creative-button eael-creative-button--wayra" href="https://ev.braip.com/checkout/plal91dv/chevljvg?af=afi9egl1zj&#038;ck=chevljvg&#038;currency=BRL&#038;pl=plal91dv" data-text="Go!">
+            <a class="eael-creative-button eael-creative-button--wayra" href="https://ev.braip.com/campanhas/cpa/camdmpxy4" data-text="Go!">
 
 	    
                 <div class="creative-button-inner">
@@ -1412,7 +1423,7 @@ Com base nos resultados enviados por consumidores fieis, indicamos os kits de 3 
 				<div class="elementor-widget-container">
 					        <div class="eael-creative-button-wrapper">
 
-            <a class="eael-creative-button eael-creative-button--wayra" href="https://ev.braip.com/ref?pl=plagjg2x&#038;ck=chevljvg&#038;af=afi9egl1zj" data-text="Go!">
+            <a class="eael-creative-button eael-creative-button--wayra" href="https://ev.braip.com/campanhas/cpa/camvmnz67" data-text="Go!">
 
 	    
                 <div class="creative-button-inner">
@@ -1476,7 +1487,7 @@ Com base nos resultados enviados por consumidores fieis, indicamos os kits de 3 
 				<div class="elementor-widget-container">
 					        <div class="eael-creative-button-wrapper">
 
-            <a class="eael-creative-button eael-creative-button--wayra" href="https://ev.braip.com/checkout/plaxpreq/chevljvg?pl=plaxpreq&#038;ck=chevljvg&#038;af=afi9egl1zj&#038;currency=BRL" data-text="Go!">
+            <a class="eael-creative-button eael-creative-button--wayra" href="https://ev.braip.com/campanhas/cpa/camx6znv6" data-text="Go!">
 
 	    
                 <div class="creative-button-inner">
@@ -2811,6 +2822,81 @@ img {
   </div>
 </a>
 
+<!-- Pixel Tracking: InitiateCheckout nos botões CTA -->
+<script>
+(function() {
+  var CHECKOUT_DATA = {
+    'camx6znv6': { value: 119.00, num_items: 1 },
+    'camvmnz67': { value: 297.00, num_items: 3 },
+    'camdmpxy4': { value: 387.00, num_items: 5 },
+    'cam69m4vj': { value: 599.00, num_items: 10 },
+  };
+
+  function getCookie(name) {
+    var v = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+    return v ? v.pop() : '';
+  }
+
+  function getProductFromUrl(href) {
+    for (var key in CHECKOUT_DATA) {
+      if (href.indexOf(key) !== -1) return { key: key, data: CHECKOUT_DATA[key] };
+    }
+    return { key: 'desconhecido', data: { value: 0, num_items: 1 } };
+  }
+
+  function genEventId() {
+    return 'ic_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a.eael-creative-button').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var href = btn.getAttribute('href') || '';
+        var product = getProductFromUrl(href);
+        var eventId = genEventId();
+
+        // Meta Pixel — InitiateCheckout (client-side)
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'InitiateCheckout', {
+            content_ids: ['colageno-tipo2-pro'],
+            content_type: 'product',
+            num_items: product.data.num_items,
+            currency: 'BRL',
+            value: product.data.value,
+          }, { eventID: eventId });
+        }
+
+        // Google Ads — Conversion
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-16594638762/AU7pCK7DmP4bEKqv-Og9',
+            'value': product.data.value,
+            'currency': 'BRL',
+            'transaction_id': eventId,
+          });
+        }
+
+        // Meta CAPI — InitiateCheckout (server-side, deduplicação via event_id)
+        fetch('/api/meta-event', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            event_name: 'InitiateCheckout',
+            event_id: eventId,
+            event_source_url: window.location.href,
+            client_user_agent: navigator.userAgent,
+            fbc: getCookie('_fbc'),
+            fbp: getCookie('_fbp'),
+            value: product.data.value,
+            currency: 'BRL',
+            num_items: product.data.num_items,
+          })
+        }).catch(function(){});
+      });
+    });
+  });
+})();
+</script>
 </body>
 </html>
 

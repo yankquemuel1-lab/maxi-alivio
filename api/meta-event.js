@@ -3,8 +3,8 @@
 // Isso bypassa bloqueadores de ads e restrições de browser (iOS/Safari)
 
 const PIXEL_ID    = '26905366805730496';
-const ACCESS_TOKEN = 'EAAVEopQ401EBQ1ZCrfWIosXcfPf9zfl74syBx5MaMpUtyLWwtlVOkMxWOsuWVwRA12rF45WAEhGY0EEPiitWkAYI4qA38gZA0eyc6qFtnNjAm8PYVQ0LZBPRo5ZCQeySJuBEAF053OGVs1XVpIpKe1P3yGVtOgkCRfohw7WlTNmEZAIIMciPZC36OES7IsccqZBtwZDZD';
-const API_VERSION  = 'v19.0';
+const ACCESS_TOKEN = 'EAAVEopQ401EBQ4WItzl9srVv5ZBzjwTIsuwBADZAYljYtRlnbcqQHfPZCijOxakiRlZB8VZCB9xnwp63QH7wUUPecqAnayNjS7AKuiXRNDdyJHZCgI4GZCZAkoivzGuwpfAwoqsVt2jZBj39OBMmuy0pSoMZC83pE9qIsbGQiZBVrhrVdPryyyqv7GEGwTkhhH8dJAZCoQZDZD';
+const API_VERSION  = 'v21.0';
 const META_URL     = `https://graph.facebook.com/${API_VERSION}/${PIXEL_ID}/events`;
 
 export default async function handler(req, res) {
@@ -22,7 +22,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { event_name, event_source_url, client_ip_address, client_user_agent, fbc, fbp } = req.body;
+    const { event_name, event_id, event_source_url, client_ip_address, client_user_agent, fbc, fbp, value, currency, num_items } = req.body;
 
     if (!event_name) {
       return res.status(400).json({ error: 'event_name is required' });
@@ -32,14 +32,24 @@ export default async function handler(req, res) {
     const eventData = {
       event_name,
       event_time: Math.floor(Date.now() / 1000),
-      event_source_url: event_source_url || 'https://maximumalivio.vercel.app',
+      event_source_url: event_source_url || 'https://produto-oficial.site',
       action_source: 'website',
+      ...(event_id && { event_id }),
       user_data: {
         client_ip_address: client_ip_address || req.headers['x-forwarded-for'] || req.socket?.remoteAddress || '',
         client_user_agent: client_user_agent || req.headers['user-agent'] || '',
-        ...(fbc  && { fbc }),
-        ...(fbp  && { fbp }),
+        ...(fbc && { fbc }),
+        ...(fbp && { fbp }),
       },
+      ...(value != null && {
+        custom_data: {
+          value,
+          currency: currency || 'BRL',
+          ...(num_items && { num_items }),
+          content_ids: ['colageno-tipo2-pro'],
+          content_type: 'product',
+        },
+      }),
     };
 
     const body = {
